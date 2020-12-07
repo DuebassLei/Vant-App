@@ -41,10 +41,12 @@
 <style lang="less" scoped>
     .menu-logo{
         margin-left: 8px;
+        margin-top: 8px;
     }
     .menu-title{
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 700;
+        line-height: 30px;
         color: #534e52;
     }
     .menu-icon{

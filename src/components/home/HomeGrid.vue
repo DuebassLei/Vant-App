@@ -1,10 +1,10 @@
 <template>
     <div id="home-grid">
-        <van-grid gutter="10" v-for="(grid,index) in gridList" :key="index" icon-size="42" :clickable="true" :border="false">
+        <van-grid gutter="2" v-for="(grid,index) in gridList" :key="index" :clickable="true" :border="false">
             <van-grid-item v-for="(item,indexs) in grid" :key="indexs"  :text="item.text">
-                <template slot="icon">
-                    <van-icon :name="item.icon" :color="item.color" />
-                </template>
+              <template slot="icon">
+                <span :class="item.icon" class="icon-css"  :style="{color: `${item.color}`}" />
+              </template>
             </van-grid-item>
         </van-grid>
     </div>
@@ -18,45 +18,45 @@
                 gridList:[
                     [
                         {
-                            text: '健康报备',
-                            icon: 'location-o',
+                            text: '精选头像',
+                            icon: 'iconfont icon-camera ',
                             color: '#00bcd4'
                         },
                         {
-                            text: '日报',
-                            icon: 'like-o',
+                            text: '精选壁纸',
+                            icon: 'iconfont icon-pic',
                             color: '#a0ffe6'
                         },
                         {
-                            text: '周报',
-                            icon: 'star-o',
+                            text: '电脑壁纸',
+                            icon: 'iconfont icon-training1',
                             color: '#c70039'
                         },
                         {
-                            text: '审批',
-                            icon: 'phone-o',
+                            text: '在线作图',
+                            icon: 'iconfont icon-earth',
                             color: '#347474'
                         }
                     ],
                     [
                         {
-                            text: '打卡',
-                            icon: 'fire-o',
+                            text: '每日语录',
+                            icon: 'iconfont icon-collection-fill',
                             color: '#ff2e63'
                         },
                         {
-                            text: '公告',
-                            icon: 'cart-o',
+                            text: '每周小记',
+                            icon: 'iconfont icon-writing',
                             color: '#f8b24f'
                         },
                         {
-                            text: '工资单',
-                            icon: 'gem-o',
+                            text: '二维码制作',
+                            icon: 'iconfont icon-QRcode',
                             color: '#ffacb7'
                         },
                         {
                             text: '帮助中心',
-                            icon: 'gift-o',
+                            icon: 'iconfont icon-help1',
                             color: '#00bcd4'
                         }
 
@@ -67,8 +67,8 @@
     }
 </script>
 
-<style lang="less" >
-    /*#home-grid .van-icon{*/
-    /*    color: #07c160;*/
-    /*}*/
+<style lang="less" scoped>
+.icon-css{
+  font-size: 60px;
+}
 </style>
