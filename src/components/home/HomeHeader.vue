@@ -13,15 +13,8 @@
             <van-col span="6">
                 <span class="menu-title">工作台</span>
             </van-col>
-            <van-col span="5"></van-col>
-            <van-col span="3">
-                <van-icon name="location-o" class="menu-icon" />
-            </van-col>
-            <van-col span="3">
-                <van-icon name="like-o" class="menu-icon" />
-            </van-col>
-            <van-col span="3">
-                <van-icon name="fire-o" class="menu-icon" />
+            <van-col span="14">
+              <span class="iconfont icon-all" style="font-size: 40px;float: right;margin-right: 10px"></span>
             </van-col>
         </van-row>
     </div>
