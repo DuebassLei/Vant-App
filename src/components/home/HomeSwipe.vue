@@ -14,7 +14,7 @@
         data() {
             return {
                 images: [
-                    require('@/assets/image/swipe/swipe-a.jpg'),
+                    require('@/assets/image/swipe/swipe-c.jpg'),
                     require('@/assets/image/swipe/swipe-b.png'),
                 ],
             };

@@ -22,15 +22,15 @@ export default [
           keepAlive: true
         }
       },
+      {
+        path: '/contact',
+        name: 'contact',
+        component: () => import('@/views/base/Contacts'), // 使用懒加载
+        meta: {
+          name: '联系人',
+          requireAuth: true,
+        },
+      },
     ]
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: () => import('@/views/base/Contacts'), // 使用懒加载
-    meta: {
-      name: '联系人',
-      requireAuth: true,
-    },
   },
 ];

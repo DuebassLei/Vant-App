@@ -9,8 +9,20 @@
 - `axios组件http.js`封装
 
 
+## 功能预览
+
+- 首页
+
+![首页](docs/images/home.png)
+
+
+- 有故事的女同学
+![有故事的女同学](docs/images/story.png)
+
+
 
 ## 运行项目
+
 ```
 # 安装依赖
 yarn install
@@ -20,8 +32,6 @@ yarn serve
 yarn build
 
 ```
-
-
 
 ## `Vant`定制主题
 

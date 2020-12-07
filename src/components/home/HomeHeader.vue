@@ -34,7 +34,7 @@
 <style lang="less" scoped>
     .menu-logo{
         margin-left: 8px;
-        margin-top: 8px;
+        /*margin-top: 4px;*/
     }
     .menu-title{
         font-size: 26px;
