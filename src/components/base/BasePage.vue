@@ -1,8 +1,19 @@
 <template>
     <div id="base-page">
-        <slot name="navBar">
-            <van-nav-bar left-text="返回" left-arrow safe-area-inset-top @click-left="handleBack"/>
-        </slot>
+        <van-nav-bar fixed safe-area-inset-top>
+          <template #left>
+            <slot name="left"></slot>
+          </template>
+          <template #title>
+            <slot name="title">
+              <span style="color: #ffffff;font-size: 18px">{{title}}</span>
+            </slot>
+          </template>
+          <template #right>
+            <slot name="right">
+            </slot>
+          </template>
+        </van-nav-bar>
         <slot></slot>
     </div>
 </template>
@@ -10,6 +21,12 @@
 <script>
     export default {
         name: "BasePage",
+        props: {
+          title: {
+            type: String,
+            default: ''
+          }
+        },
         data(){
             return{
             }

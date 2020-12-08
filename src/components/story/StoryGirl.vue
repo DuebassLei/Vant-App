@@ -1,6 +1,6 @@
 <template>
     <div id="story-card">
-        <van-nav-bar safe-area-inset-top @click-left="handleBack">
+        <van-nav-bar safe-area-inset-top fixed @click-left="handleBack">
             <template #left>
                 <span class="iconfont icon-return" style="color: rgb(254,67,101)"></span>
             </template>

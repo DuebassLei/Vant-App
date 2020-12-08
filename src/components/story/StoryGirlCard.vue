@@ -39,11 +39,14 @@
 </script>
 
 <style lang="less" scoped>
+#story-girl-card{
+  margin-top: 43px;
+}
 .story{
-
     margin:0 20px;
 }
 .story-info{
+   text-indent:2em;
    margin: 5px;
    font-size: 14px;
    line-height: 18px;
