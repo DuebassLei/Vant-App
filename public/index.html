@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
-      <script>
-          // 这段代码要放在其他js的前面
-          (function(){
-              var redirect = sessionStorage.redirect;
-              delete sessionStorage.redirect;
-              if (redirect && redirect != location.href) {
-                  history.replaceState(null, null, redirect);
-              }
-          })();
-      </script>
   </head>
   <body>
     <noscript>
