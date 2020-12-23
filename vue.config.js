@@ -4,7 +4,8 @@ const pxtoviewport = require('postcss-px-to-viewport');
 const path = require('path');
 module.exports = {
   outputDir: 'dist',
-  publicPath: process.env.NODE_ENV === 'production' ? '/vant-app/' : '/',
+  //publicPath: process.env.NODE_ENV === 'production' ? '/vant-app/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   chainWebpack: (config) => {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
     types.forEach((type) =>
