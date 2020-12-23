@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0ce756"],{6017:function(n,t,e){"use strict";e.r(t);var c=function(){var n=this,t=n.$createElement,e=n._self._c||t;return e("div",{attrs:{id:"base-contacts"}},[n._v("联系人")])},a=[],s={name:"Contacts"},u=s,l=e("2877"),o=Object(l["a"])(u,c,a,!1,null,null,null);t["default"]=o.exports}}]);
+//# sourceMappingURL=chunk-2d0ce756.7ba8ea4c.js.map

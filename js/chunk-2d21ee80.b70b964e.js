@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d21ee80"],{d80f:function(e,n,r){"use strict";r.r(n);var t=function(){var e=this,n=e.$createElement,r=e._self._c||n;return r("div",{attrs:{id:"error-404"}},[e._v("404 Page not found !")])},o=[],u={name:"Error404"},a=u,c=r("2877"),l=Object(c["a"])(a,t,o,!1,null,null,null);n["default"]=l.exports}}]);
+//# sourceMappingURL=chunk-2d21ee80.b70b964e.js.map
