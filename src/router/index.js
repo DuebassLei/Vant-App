@@ -54,7 +54,7 @@ routes.push(
 );
 //warning️: 二级路由不需要加
 const router = new Router({
-  mode: 'history',
+  //mode: 'history',
   routes,
   // 页面滚动行为
   scrollBehavior(to, from, savedPosition) {
