@@ -29,14 +29,14 @@
     },
     methods: {
       init() {
-        this.$http
-          .get("/api/v1/test/list")
-          .then((res) => {
-            console.log(res);
-          })
-          .catch((e) => {
-            console.log(e);
-          });
+        // this.$http
+        //   .get("/api/v1/test/list")
+        //   .then((res) => {
+        //     console.log(res);
+        //   })
+        //   .catch((e) => {
+        //     console.log(e);
+        //   });
       },
     },
   };

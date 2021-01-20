@@ -18,51 +18,51 @@
                 gridList:[
                     [
                         {
-                            text: '精选头像',
+                            text: '传记名著',
                             icon: 'iconfont icon-camera ',
                             color: '#00bcd4',
                             url: '/story'
                         },
                         {
-                            text: '精选壁纸',
+                            text: '出版小说',
                             icon: 'iconfont icon-pic',
                             color: '#a0ffe6',
                             url: '/story'
                         },
                         {
-                            text: '电脑壁纸',
+                            text: '人文社科',
                             icon: 'iconfont icon-training1',
                             color: '#c70039',
                             url: '/story'
                         },
                         {
-                            text: '在线作图',
+                            text: '经管理财',
                             icon: 'iconfont icon-earth',
                             color: '#347474',
-                            url: '/story'
+                            url: '/dashboard/echart'
                         }
                     ],
                     [
                         {
-                            text: '每日语录',
+                            text: '青春言情',
                             icon: 'iconfont icon-collection',
                             color: '#ff2e63',
                             url: '/story'
                         },
                         {
-                            text: '每周小记',
+                            text: '外文原版',
                             icon: 'iconfont icon-writing',
                             color: '#f8b24f',
                             url: '/story'
                         },
                         {
-                            text: '二维码制作',
+                            text: '政治军事',
                             icon: 'iconfont icon-QRcode',
                             color: '#ffacb7',
                             url: '/story'
                         },
                         {
-                            text: '帮助中心',
+                            text: '成功励志',
                             icon: 'iconfont icon-help1',
                             color: '#00bcd4',
                             url: '/story'

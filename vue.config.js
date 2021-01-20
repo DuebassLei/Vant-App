@@ -11,6 +11,21 @@ module.exports = {
     types.forEach((type) =>
       addStyleResource(config.module.rule('less').oneOf(type))
     );
+    config.plugin('webpack-bundle-analyzer')
+        .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
+  },
+  devServer: {
+    disableHostCheck: true,
+    proxy: {
+      '/book': {
+        target: 'http://novel.kele8.cn',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/book': ''
+        }
+      },
+    }
   },
   css: {
     loaderOptions: {

@@ -24,27 +24,27 @@
             return {
                 tabberMenu: [
                     {
-                        name: "工作台",
+                        name: "首页",
                         router: "/dashboard/home",
                         icon: "home-o",
                     },
                     {
-                        name: "消息",
-                        router: "/contact",
+                        name: "分类",
+                        router: "/dashboard/category",
                         icon: "chat-o",
                     },
                     {
-                        name: "日历",
-                        router: "/contact",
+                        name: "书架",
+                        router: "/dashboard/bookshelf",
                         icon: "calendar-o",
                     },
                     {
-                        name: "云文档",
+                        name: "排行",
                         router: "/contact",
                         icon: "notes-o",
                     },
                     {
-                        name: "联系人",
+                        name: "个人中心",
                         router: "/contact",
                         icon: "contact",
                     },

@@ -11,7 +11,7 @@
                 />
             </van-col>
             <van-col span="6">
-                <span class="menu-title">工作台</span>
+                <span class="menu-title">鱼小说</span>
             </van-col>
             <van-col span="14">
               <span class="iconfont icon-all" style="font-size: 40px;float: right;margin-right: 10px"></span>

@@ -7,9 +7,6 @@ const state={
   };
 
 const getters = {
-    // getUserInfo(state) {
-    //   return state.userInfo
-    // }
 };
 
 const mutations = {

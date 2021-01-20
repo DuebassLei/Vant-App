@@ -7,8 +7,9 @@ export default [
     // meta:{
     //   requireAuth: true
     // },
-    children: [{
-      path: '/dashboard',
+    children: [
+    {
+      path: '/',
       redirect: '/dashboard/home',
       meta: {
         keepAlive: true
@@ -23,12 +24,41 @@ export default [
         }
       },
       {
-        path: '/contact',
+        path: 'contact',
         name: 'contact',
         component: () => import('@/views/base/Contacts'), // 使用懒加载
         meta: {
           name: '联系人',
           requireAuth: true,
+        },
+      },
+      {
+        path: 'bookshelf',
+        name: 'bookshelf',
+        component: () => import('@/views/base/BookShelf'), // 使用懒加载
+        meta: {
+          name: '书架',
+          requireAuth: false,
+        },
+      },
+      {
+        path: 'category',
+        name: 'category',
+        component: () => import('@/views/base/Category'), // 使用懒加载
+        meta: {
+          name: '分类',
+          requireAuth: false,
+        },
+      },
+
+
+      {
+        path: 'echart',
+        name: 'echart',
+        component: () => import('@/views/base/Echart'), // 使用懒加载
+        meta: {
+          name: '在线作图',
+          // requireAuth: true,
         },
       },
     ]
