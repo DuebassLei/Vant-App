@@ -10,25 +10,39 @@ import axios from '@/utils/http'; // 导入http中创建的axios实例
 const book = {
     //获取带书籍数量的父分类
     fetchCategory(param,call) {
-        axios.get(`${base.bookApi}/categories`).then(reply=>{
+        // axios.get(`${base.bookApi}/categories`).then(reply=>{
+        axios.get(`${base.bookApi}/cats/lv2/statistics`).then(reply=>{
             call(reply.data)
-        });
+        }).catch(e=>{
+            this.$notify({ type: 'warning', message: e });
+        })
     },
     //获取某一分类书记列表
     fetchCategoryDetail(param,call) {
-        axios.get(`${base.bookApi}/category-info`,{
+        // axios.get(`${base.bookApi}/category-info`,{
+        axios.get(`${base.bookApi}/book/by-categories`,{
             params:param
         }).then(reply=>{
             call(reply.data)
-        });
+        }).catch(e=>{
+            this.$notify({ type: 'warning', message: e });
+        })
     },
     //获取书籍详情
     fetchBookDetail(param){
-        return axios(`${base.bookApi}/book-info/${param}`)
+        // return axios(`${base.bookApi}/book-info/${param}`)
+        return axios(`${base.bookApi}/book/${param}`)
     },
     //书籍短评
     fetchBookReviews(param){
-        return axios(`${base.bookApi}/book/short-reviews?book=${param}`)
+        // return axios(`${base.bookApi}/book/short-reviews?book=${param}`)
+        return axios(`${base.bookApi}/post/review/by-book?book=${param}&sort=updated&start=0&limit=30?
+`)
+
+    },
+    //书籍章节信息
+    fetchBookChapter(param){
+      return axios(`${base.bookApi}/mix-atoc/${param}?view=chapters`)
     }
 }
 

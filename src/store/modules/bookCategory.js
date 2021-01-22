@@ -44,7 +44,7 @@ const actions = {
     },
     setBookCategoryDetail({commit,state},payload){
         bookApi.fetchCategoryDetail(payload,reply=>{
-            commit(SET_BOOK_CATEGORY_DETAIL,reply)
+            commit(SET_BOOK_CATEGORY_DETAIL,reply.books)
         })
         // return new Promise((resolve, reject) => {
         //     bookApi.fetchCategory(null,reply=>{

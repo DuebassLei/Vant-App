@@ -17,12 +17,13 @@ module.exports = {
   devServer: {
     disableHostCheck: true,
     proxy: {
-      '/book': {
-        target: 'http://novel.kele8.cn',
+      '/proxy': {
+        // target: 'http://novel.kele8.cn',
+        target: 'http://api.zhuishushenqi.com',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
-          '^/book': ''
+          '^/proxy': ''
         }
       },
     }
