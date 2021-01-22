@@ -164,7 +164,7 @@ export default {
     },
     //阅读书籍
     handleRead(book){
-      this.$router.push({path:`book/read/${book._id}`,query:{id:book._id}});
+      this.$router.push({path:`/book/read/${book._id}`,query:{id:book._id}});
     }
   },
   filters:{

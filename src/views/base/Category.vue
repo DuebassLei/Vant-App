@@ -6,7 +6,7 @@
 <!--        <van-radio shape="square" name="2">女生</van-radio>-->
 <!--      </van-radio-group>-->
 <!--    </template>-->
-    <van-tabs @change="change"  v-model="activeName">
+    <van-tabs @change="change"  v-model="activeName" sticky>
       <van-tab v-for="(item,index) in tabOption" :title="item.title" :name="item.key" :key="index">
         <van-row>
           <van-col :span="6">
@@ -15,7 +15,6 @@
             </van-sidebar>
           </van-col>
           <van-col :span="18">
-
             <van-list
                 v-model="loading"
                 :finished="finished"

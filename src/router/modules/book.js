@@ -7,4 +7,13 @@ export default [
         //   requireAuth: true
         // },
     },
+    {
+        path:'/book/read/:id',
+        name:'bookRead',
+        component: ()=>import('@/components/book/BookRead'),
+        // meta:{
+        //   requireAuth: true
+        // },
+    },
+
 ];

@@ -20,16 +20,17 @@ export default [
         name: 'home',
         component: ()=>import('@/views/base/Home'),
         meta: {
+          name:'首页',
           keepAlive: true
         }
       },
       {
-        path: 'contact',
-        name: 'contact',
-        component: () => import('@/views/base/Contacts'), // 使用懒加载
+        path: 'userCenter',
+        name: 'userCenter',
+        component: () => import('@/views/base/User'), // 使用懒加载
         meta: {
-          name: '联系人',
-          requireAuth: true,
+          name: '个人中心',
+          requireAuth: false,
         },
       },
       {
@@ -38,6 +39,15 @@ export default [
         component: () => import('@/views/base/BookShelf'), // 使用懒加载
         meta: {
           name: '书架',
+          requireAuth: false,
+        },
+      },
+      {
+        path: 'bookrank',
+        name: 'bookrank',
+        component: () => import('@/views/base/BookRank'), // 使用懒加载
+        meta: {
+          name: '排行榜',
           requireAuth: false,
         },
       },

@@ -4,8 +4,11 @@
             <router-view v-if="$route.meta.keepAlive" />
         </keep-alive>
         <router-view v-if="!$route.meta.keepAlive" />
-        <van-tabbar route>
-            <van-tabbar-item replace v-for="(item, index) in tabberMenu" :key="index" :icon="item.icon" :to="item.router">
+        <van-tabbar route active-color="#00C98C">
+            <van-tabbar-item replace v-for="(item, index) in tabberMenu" :key="index" :to="item.router" >
+              <template #icon>
+                <span :class="`${item.icon}`"></span>
+              </template>
                 {{ item.name }}
             </van-tabbar-item>
         </van-tabbar>
@@ -26,27 +29,27 @@
                     {
                         name: "首页",
                         router: "/dashboard/home",
-                        icon: "home-o",
+                        icon: "iconfont icon-store-fill",
                     },
                     {
                         name: "分类",
                         router: "/dashboard/category",
-                        icon: "chat-o",
+                        icon: "iconfont icon-all-fill",
                     },
                     {
                         name: "书架",
                         router: "/dashboard/bookshelf",
-                        icon: "calendar-o",
+                        icon: "iconfont icon-Newuserzone-fill",
                     },
                     {
                         name: "排行",
-                        router: "/contact",
-                        icon: "notes-o",
+                        router: "/dashboard/bookRank",
+                        icon: "iconfont icon-vip-fill",
                     },
                     {
                         name: "个人中心",
-                        router: "/contact",
-                        icon: "contact",
+                        router: "/dashboard/userCenter",
+                        icon: "iconfont icon-bussiness-man-fill",
                     },
                 ],
             };

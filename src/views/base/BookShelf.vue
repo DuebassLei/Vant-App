@@ -6,15 +6,15 @@
       </van-empty>
     </template>
     <template v-else>
-
       <base-list :data-source="item" v-for="(item,index) in bookList" :key="index">
         <template #avatar>
-          <img class="list-avatar" :src="`${bookCoverApi}${item.cover}`"/>
+          <img class="list-avatar" :src="`${bookCoverApi}${item.cover}`" @click="handleRead(item)" />
         </template>
         <template #body>
-          <p><span class="commnent-nickname">{{item.title}}</span></p>
-          <p><span>{{item.author}}</span></p>
-          <p class="commnent-content">{{item.lastChapter}}</p>
+          <p style="margin-top: 12px"><span class="list-title">{{item.title}}</span></p>
+          <p><span>作者：{{item.author}}</span></p>
+          <p class="list-content">连载至：{{item.lastChapter}}</p>
+          <span class="btn-remove iconfont icon-ashbin-fill" @click="handleDel(item,index)"></span>
         </template>
       </base-list>
     </template>
@@ -23,7 +23,7 @@
 
 <script>
 import BasePage from "@/components/base/BasePage";
-import {read} from "@/utils/storage";
+import {read, save} from "@/utils/storage";
 import BaseList from "@/components/base/BaseList";
 import base from "@/api/base"
 export default {
@@ -38,6 +38,11 @@ export default {
   created() {
     this.init();
   },
+  computed:{
+    // dataSource(){
+    //   return this.bookList;
+    // }
+  },
   methods:{
     //初始化书架
     init(){
@@ -46,6 +51,43 @@ export default {
         this.bookList.push(bookShelf[i])
         console.log(this.bookList)
       }
+    },
+    //移除书架书籍
+    handleDel(book,index){
+      let bookShelf = JSON.parse(read('bookShelf')||'{}');
+      let vm = this;
+      this.$dialog.confirm({
+        title: '提示',
+        message: '确定要从书架中移除？',
+        confirmButtonColor: '#ee0a24',
+        cancelButtonColor:'#00C98C',
+        // theme: 'round-button',
+      }).then(()=>{
+        delete bookShelf[book.id]
+        // delete vm.bookList[index]
+        vm.bookList= [];
+        save('bookShelf',JSON.stringify(bookShelf))
+        vm.init();
+        this.$notify({
+          type: 'success',
+          background: '',
+          message: '移除书籍成功'
+        })
+      }).catch(()=>{
+        this.$notify({
+          type: 'success',
+          message: '取消操作'
+        })
+      })
+    },
+    //阅读书籍
+    handleRead(book){
+      this.$router.push({
+        path: `/book/read/${book.id}`,
+        query:{
+          id: book.id
+        }
+      })
     }
   }
 }
