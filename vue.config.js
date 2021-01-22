@@ -6,13 +6,17 @@ module.exports = {
   outputDir: 'dist',
   //publicPath: process.env.NODE_ENV === 'production' ? '/vant-app/' : '/',
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  assetsDir: 'static',
+  productionSourceMap: false,
   chainWebpack: (config) => {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal'];
     types.forEach((type) =>
       addStyleResource(config.module.rule('less').oneOf(type))
     );
-    config.plugin('webpack-bundle-analyzer')
-        .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
+    if(process.env.NODE_ENV !== 'production'){
+      config.plugin('webpack-bundle-analyzer')
+          .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
+    }
   },
   devServer: {
     disableHostCheck: true,

@@ -41,9 +41,10 @@ const book = {
 
     },
     //书籍章节信息
-    fetchBookChapter(param){
-      return axios(`${base.bookApi}/mix-atoc/${param}?view=chapters`)
-    }
+    fetchBookChapter(param) {
+        return axios(`${base.bookApi}/mix-atoc/${param}?view=chapters`)
+    },
+    //排行榜信息
 }
 
 export default book;

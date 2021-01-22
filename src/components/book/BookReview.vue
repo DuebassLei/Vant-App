@@ -6,7 +6,7 @@
         <img class="commnet-avatar" :src="`${bookApi}${item.author.avatar}`">
         <div class="commnent-body">
           <p><span class="commnent-nickname">{{item.author.nickname}}</span><span class="commnent-date">{{item.updated|formatDate}}</span></p>
-          <p class="mui-ellipsis">{{item.title}}</p>
+          <p class="commnent-title">{{item.title}}</p>
           <p class="commnent-content">{{item.content}}</p>
         </div>
       </li>
@@ -16,7 +16,7 @@
 
 <script>
 import base from "@/api/base";
-import {format_zh_CN,DATE_TIME_MINUTE_ZH_FMT} from '@/utils/day'
+import {format_zh_CN,DATE_FMT} from '@/utils/day'
 export default {
   name: "BookReview",
   props:{
@@ -34,7 +34,7 @@ export default {
   },
   filters: {
     formatDate(time) {
-      return format_zh_CN(time,DATE_TIME_MINUTE_ZH_FMT);
+      return format_zh_CN(time,DATE_FMT);
     }
   },
 }
@@ -52,21 +52,24 @@ export default {
     overflow-y: auto;
   }
   .commnent-ul-li{
-    margin-bottom: 30px;
-    height: 120px;
+    margin: 0px 2px 10px 2px;
+    height: 180px;
     .commnet-avatar{
       height: 42px;
       width: 12%;
-      margin: 6px;
-      //border-radius: 25px;
+      margin: 14px 3px;
+      border-radius: 6px;
     }
     .commnent-body{
       float: right;
       width: 84%;
       p{
-        font-size: 6px;
-        padding: 1px;
+        font-size: 16px;
+        //padding: 1px;
       }
+      //.commnent-title{
+      //  font-size: 12px;
+      //}
       .commnent-content{
         display: -webkit-box;
         overflow: hidden;
@@ -74,14 +77,16 @@ export default {
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 4;
         color: #8F8F94;
-
+        font-size: 14px;
       }
       .commnent-nickname{
+        margin-top:-10px ;
         color: @bgColor;
+        //font-size: 16px;
       }
       .commnent-date{
         float: right;
-        font-size: 4px;
+
         color: #8F8F94;
       }
     }

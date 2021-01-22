@@ -11,7 +11,7 @@
                 />
             </van-col>
             <van-col span="6">
-                <span class="menu-title">鱼小说</span>
+                <span class="menu-title">小鱼追书</span>
             </van-col>
             <van-col span="14">
               <span class="iconfont icon-all" style="font-size: 40px;float: right;margin-right: 10px"></span>
@@ -37,9 +37,9 @@
         /*margin-top: 4px;*/
     }
     .menu-title{
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 30px;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 36px;
         color: #534e52;
     }
     .menu-icon{
