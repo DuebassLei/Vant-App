@@ -17,7 +17,7 @@ const book = {
             this.$notify({ type: 'warning', message: e });
         })
     },
-    //获取某一分类书记列表
+    //获取某一分类书籍列表
     fetchCategoryDetail(param,call) {
         // axios.get(`${base.bookApi}/category-info`,{
         axios.get(`${base.bookApi}/book/by-categories`,{
@@ -44,7 +44,25 @@ const book = {
     fetchBookChapter(param) {
         return axios(`${base.bookApi}/mix-atoc/${param}?view=chapters`)
     },
-    //排行榜信息
+    //获取所有排行榜
+    fetchBookRanking(param,call){
+        let vm = this;
+         axios(`${base.bookApi}/ranking/gender`).then(reply=>{
+             call(reply.data)
+         }).catch(e=>{
+             // vm.$notify({ type: 'warning', message: e });
+             console.log(e)
+         })
+    },
+    //获取单一排行榜
+    fetchBookRankingById(param,call){
+
+         axios(`${base.bookApi}/ranking/${param}`).then(reply=>{
+             call(reply.data)
+         }).catch(e=>{
+             this.$notify({ type: 'warning', message: e });
+         })
+    }
 }
 
 export default book;
