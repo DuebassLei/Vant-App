@@ -11,15 +11,15 @@
 
 ## 功能预览
 
-- 首页
+- 小说首页
 
-![首页](docs/images/home.png)
+![小说首页](https://duebasslei.gitee.io/picgopicturebed/openSource/vant-app1.jpg)
 
+- 小说分类
+![小说分类](https://duebasslei.gitee.io/picgopicturebed/openSource/20210302163508.png)
 
-- 有故事的女同学
-
-![有故事的女同学](docs/images/story.png)
-
+- 小说简介
+![小说简介](https://duebasslei.gitee.io/picgopicturebed/openSource/20210302163330.png)
 
 
 ## 运行项目
